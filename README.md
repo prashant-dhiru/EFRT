@@ -9,6 +9,7 @@ EFRT (Effort Logger for JIRA) is a command-line interface (CLI) application desi
 
 - **Effort Logging:** Log your work effortlessly by providing key details such as JIRA issue key, time spent, and optional comments.
 - **Interactive Mode:** Use the interactive mode for a user-friendly experience, guiding you through the process of logging effort step by step.
+- **Configurable:**  Configure the tool as per your requirment, you can configure the JIRA server's base URL as well as API used by the tool
 
 <!-- TODO windowss and linux  executable  -->
 ## Installation
@@ -46,17 +47,16 @@ EFRT (Effort Logger for JIRA) is a command-line interface (CLI) application desi
 
 ## Usage
 
-### Logging Effort
+### Logging Effort - Interactive Mode:
+    
+```bash
+./efrt log
+```
 
-1. **Interactive Mode:**
-    ```bash
-    ./efrt log
-    ```
-
-    Follow the on-screen prompts to log effort interactively.
-    #### Log Flags
-    - **-c, --comment:** Interactively add comment 
-    - **-o, --old:** Interactively add worklog for pervious day
+Follow the on-screen prompts to log effort interactively.
+#### Log Flags
+- **-c, --comment:** Interactively add comment 
+- **-o, --old:** Interactively add worklog for pervious day 
 
 
 ### Global Flag
@@ -70,12 +70,11 @@ EFRT (Effort Logger for JIRA) is a command-line interface (CLI) application desi
     ./efrt.py config
     ```
 
-    Follow the instructions to provide your JIRA base URL, username, and API token.
-
-2. (Optional) Set up your JIRA config using the `--set` flag such as the JIRA server, JIRA Personal Access Token, etc :
+2. Set up your JIRA config using the `--set` flag such as the JIRA server, JIRA Personal Access Token, etc :
 
     ```bash
     ./efrt.py config --set=KEY:VALUE
+    ./efrt.py config --set=JIRA_ACCESS_TOKEN:<JIRA_PERSONAL_ACCESS_TOKEN>
     ```
 
 <!-- ## Example
