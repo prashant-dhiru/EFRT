@@ -1,0 +1,5 @@
+---
+JIRA_SERVER : "https://jiradc.ext.net.nokia.com"
+JIRA_API :
+  SEARCH : /rest/api/latest/search/
+  WORKLOG: /rest/api/2/issue/%s/worklog # %s will be replaced by issue id
